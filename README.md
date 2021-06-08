@@ -14,7 +14,7 @@ The CircleDNA pipeline is dedicated to the detection of eccDNA and especially ch
 - Python 3 
 - samtools
 - tidehunter
--
+
 ```bash
 # install with conda
 conda create --name SASAR python=3.8
