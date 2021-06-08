@@ -1,4 +1,4 @@
-# CircleDNA
+# eccDNA_finder
 EccDNA and Chimeric eccDNA detector using Illumina and ONT sequencing
 
 We previously developed the mobilome-seq that selectively sequence extrachromosomal circular DNA (eccDNA) forms of actively transposing transposable elements (TEs) in order to characterize active TEs in any plant or animal tissue (Lanciano et al.  PLoS Genetics, 2017).
@@ -24,3 +24,4 @@ conda install -n SASAR -c bioconda -y minimap2 tidehunter samtools
 
 ## Docs
 ## Citation
+Lanciano, S., Carpentier, M.C., Llauro, C., Jobet, E., Robakowska-Hyzorek, D., Lasserre, E., Ghesquière, A., Panaud, O. and Mirouze, M., 2017. Sequencing the extrachromosomal circular mobilome reveals retrotransposon activity in plants. PLoS genetics, 13(2), p.e1006630.
