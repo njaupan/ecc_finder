@@ -6,3 +6,19 @@ The CircleDNA pipeline is dedicated to the detection of eccDNA and especially ch
 
 
 <img width="601" alt="Screenshot 2021-01-25 at 19 12 35" src="https://user-images.githubusercontent.com/8072119/105747625-4af4c400-5f41-11eb-86ae-9d2b66a54329.png">
+
+## Getting Started
+## Install required dependencies
+
+- [Minimap2](https://github.com/lh3/minimap2)
+- Python 3 (with the following auto-installed packages)
+
+```bash
+# install with conda
+conda create --name SASAR python=3.8
+conda install -n SASAR -c bioconda -y minimap2 tidehunter
+
+```
+
+## Docs
+## Citation
