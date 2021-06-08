@@ -1,5 +1,5 @@
 # eccDNA_finder
-a tool to detect eccDNA and chimeric eccDNA using Illumina and ONT sequencing
+A tool to detect eccDNA and chimeric eccDNA using Illumina and ONT sequencing
 
 We previously developed the mobilome-seq that selectively sequence extrachromosomal circular DNA (eccDNA) forms of actively transposing transposable elements (TEs) in order to characterize active TEs in any plant or animal tissue (Lanciano et al.  PLoS Genetics, 2017).
 The CircleDNA pipeline is dedicated to the detection of eccDNA and especially chimeric eccDNA in Mobilome-seq by Illumina and ONT sequencing.
