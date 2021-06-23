@@ -17,8 +17,8 @@ The ecc_finder pipeline is dedicated to the detection of eccDNA and especially c
 
 ```bash
 # install with conda
-conda create --name SASAR python=3.8
-conda install -n SASAR -c bioconda -y minimap2 tidehunter samtools
+conda create --name ecc_finder python=3.8
+conda install -n ecc_finder -c bioconda -y minimap2 tidehunter samtools
 
 ```
 
