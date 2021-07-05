@@ -28,7 +28,7 @@ from itertools import groupby
 from operator import itemgetter
 from pybedtools import BedTool
 
-parser = argparse.ArgumentParser(description="Statstics of minimap2 alignment results(.paf files)")
+parser = argparse.ArgumentParser(description="Calculate the statstics of alignment results")
 parser.add_argument("-i","--paf",help="paf file name")
 parser.add_argument('-m',type=int,help="min align length")
 parser.add_argument('-mq', type=int,help="min query length")
@@ -41,7 +41,7 @@ def statsFromPaf(pafFile):
     OutfilePrefix1 =pafFileNamePattern.match(pafFile) # define outfile 
     OutfilePrefix=OutfilePrefix1.group(1)      
     outfile=open( 'paf.stats','w') 
-    headers = ['refID','rstart', 'rend','queryID','qstart', 'qend', 'qlen','rlen','direction','allmatch','blast_iden']   
+    headers = ['refID','rstart', 'rend','queryID','qstart', 'qend', 'qlen','rlen','iden']   
     #outfile.write('\t'.join(headers))
     #outfile.write('\n')
     total=0
@@ -49,7 +49,7 @@ def statsFromPaf(pafFile):
     for line in paf:         
         parts = line.strip().split("\t")
         total=total+1
-        blast_iden =  100.0 *int((parts[9]))/ int((parts[10]))
+        iden =  100.0 *int((parts[9]))/ int((parts[10]))
         #qcov =  100.0 *(int((parts[3]))-int((parts[2])))/ int((parts[1]))
         #rcov =  100.0 *(int((parts[8]))-int((parts[7])))/ int((parts[6]))
         resultss = {
@@ -63,7 +63,7 @@ def statsFromPaf(pafFile):
 		 "rstart": int(parts[7]),
 		 "rend": int(parts[8]),
 		 "allmatch": int(parts[9]),
-		 "blast_iden": blast_iden,
+		 "iden": iden,
 
          }
         if args.m is not None and resultss['allmatch'] < args.m:
