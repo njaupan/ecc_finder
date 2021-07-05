@@ -1,3 +1,4 @@
+
 # ecc_finder
 A robust and accurate detection tool to detect eccDNA using Illumina and ONT sequencing
 
@@ -5,7 +6,7 @@ We previously developed the mobilome-seq that selectively sequence extrachromoso
 
 ecc_finder is dedicated to 1) identify eccDNA from Nanopore reads, 2) identify eccDNA from from Illumina paried end short reads, 3) provide clear boundary of eccDNA-producing loci to investigate the origins of eccDNAs.
 
-<img width="510" alt="ecc_finder_pipeline" src="https://user-images.githubusercontent.com/8072119/124468507-7a81e500-dd99-11eb-8d52-e0d9f3bec733.png">
+<img width="859" alt="ecc_finder_pipeline" src="https://user-images.githubusercontent.com/8072119/124471271-f6316100-dd9c-11eb-9a97-31f86fdf6711.png">
 
 ## Getting Started
 ## Install required dependencies
