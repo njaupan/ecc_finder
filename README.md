@@ -1,9 +1,9 @@
 # ecc_finder
-A tool to detect eccDNA and chimeric eccDNA using Illumina and ONT sequencing
+A robust and accurate detection tool to detect eccDNA using Illumina and ONT sequencing
 
 We previously developed the mobilome-seq that selectively sequence extrachromosomal circular DNA (eccDNA) forms of actively transposing transposable elements (TEs) in order to characterize active TEs in any plant or animal tissue (Lanciano et al.  PLoS Genetics, 2017).
-The ecc_finder pipeline is dedicated to the detection of eccDNA and especially chimeric eccDNA in Mobilome-seq by Illumina and ONT sequencing.
 
+ecc_finder is dedicated to 1) identify eccDNA from Nanopore reads, 2) identify eccDNA from from Illumina paried end short reads, 3) provide clear boundary of eccDNA-producing loci to investigate the origins of eccDNAs.
 
 <img width="510" alt="ecc_finder_pipeline" src="https://user-images.githubusercontent.com/8072119/124468507-7a81e500-dd99-11eb-8d52-e0d9f3bec733.png">
 
