@@ -1,5 +1,24 @@
+#!/usr/bin/env python3
 """
-Metrics from sam/bam file
+# June 2021
+# If using this pipeline please cite : XXXXXXXXXX
+#--------------------------------------------------------------------------+    
+#                                                   
+#	ecc_finder is a tool 
+#       to robust and accurate detect extrachromosomal circular DNA (eccDNA)
+#                                                        
+#--------------------------------------------------------------------------+
+#                                                      
+#	AUTHOR: panpan ZHANG                            
+#	CONTACT: njaupanpan@gmail.com                      
+#                                                         
+#	LICENSE:                                            
+# 	GNU General Public License, Version 3               
+#	http://www.gnu.org/licenses/gpl.html  
+#                                             
+#	VERSION: V.1                    
+#                                                                                                       
+#--------------------------------------------------------------------------+
 """
 
 import argparse
