@@ -5,7 +5,7 @@
 #--------------------------------------------------------------------------+    
 #                                                   
 #	ecc_finder is a tool 
-#       to robust and accurate detect extrachromosomal circular DNA (eccDNA)
+#       to detect extrachromosomal circular DNA (eccDNA)
 #                                                        
 #--------------------------------------------------------------------------+
 #                                                      
