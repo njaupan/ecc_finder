@@ -9,6 +9,15 @@ ecc_finder is dedicated to 1) identify eccDNA from Nanopore reads, 2) identify e
 
 <img width="641" alt="ecc_finder_pipeline" src="https://user-images.githubusercontent.com/8072119/124471419-20831e80-dd9d-11eb-89ce-49d5493764d5.png">
 
+## Table of Contents
+
+- [Introduction](#intro)
+- [Users' Guide](#uguide)
+  - [Installation](#install)
+  - [Usage](#Usage)
+  - [Example](#example)
+- [Limitations](#limit)
+
 ## Getting Started
 ## Install required dependencies
 
