@@ -36,6 +36,10 @@ conda create --name ecc_finder python=3.8
 conda install -n ecc_finder -c bioconda -y minimap2 tidehunter samtools
 
 ```
+## <a name="example"></a>Example
+PRJEB46420
+Arabidopsis thaliana under heat stress 
+Triticum aestivum 
 
 ## Docs
 ## Citation
