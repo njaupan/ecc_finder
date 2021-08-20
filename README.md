@@ -36,6 +36,43 @@ conda create --name ecc_finder python=3.8
 conda install -n ecc_finder -c bioconda -y minimap2 tidehunter samtools
 
 ```
+## <a name="Usage"></a>Usage
+```
+python '/home/panpan/Downloads/softwares/ecc_finder/eccFinder_map-ont.py' 
+usage: ecc_finder.py map-ont <reference.idx> <query.fq>
+
+A tool to detect eccDNA loci using ONT sequencing
+
+positional arguments:
+  <reference.idx>   index file of reference genome
+  <query.fq>        query fastq file (uncompressed or bgzipped)
+
+optional arguments:
+  -h, --help        show this help message and exit
+
+map options:
+  -t INT            number of CPU threads for mapping mode
+  -m PATH           long read executable [minimap2]
+  --mm2-params STR  minimap2 parameters ['-ax map-ont']
+  -l INT            minimum alignment length [200]
+  -g INT            maximum distance between significant site [100]
+
+validation options:
+  -c INT            minimum copy number of tandem repeat in a long read [2]
+  -e FLT            maximum allowed divergence rate between two consecutive
+                    repeats [0.25]
+  -p INT            minimum period size of tandem repeat (>=2) [30]
+  -P INT            maximum period size of tandem repeat (<=4294967295) [100K]
+  -v INT            coverage validation window size [10000]
+  --min-read INT    filter eccDNA loci by unique mapped read number [3]
+  --min-bound FLT   filter eccDNA loci by boudary coverage [0.8]
+
+output options:
+  -o PATH           output directory [./eccFinder_output]
+  -w                overwrite intermediate files
+  -x X              add prefix to output [ecc.ont]
+```
+
 ## <a name="example"></a>Example
 #PRJEB46420
 - Arabidopsis thaliana under heat stress 
