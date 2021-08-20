@@ -16,9 +16,18 @@ A robust and accurate detection tool to detect eccDNA using Illumina and ONT seq
 
 We previously developed the mobilome-seq that selectively sequence extrachromosomal circular DNA (eccDNA) forms of actively transposing transposable elements (TEs) in order to characterize active TEs in any plant or animal tissue (Lanciano et al.  PLoS Genetics, 2017).
 
-ecc_finder is dedicated to 1) identify eccDNA from Nanopore reads, 2) identify eccDNA from from Illumina paried end short reads, 3) provide clear boundary of eccDNA-producing loci to investigate the origins of eccDNAs.
+ecc_finder is dedicated to 
+1) identify eccDNA from Nanopore reads, 
+2) identify eccDNA from from Illumina paried end short reads, 
+3) provide bona fide locus boundary of eccDNA-producing loci to investigate the origins of eccDNAs.
 
 <img width="641" alt="ecc_finder_pipeline" src="https://user-images.githubusercontent.com/8072119/124471419-20831e80-dd9d-11eb-89ce-49d5493764d5.png">
+
+Validation 
+1)To access ecc_finder accuracy for long read, the confidence score is assigned by tandem repeat pattern from read alignment. Except for satellites, when performing self-alignment, linear reads will not repeat itself while circular reads will be repeated two or more times because it goes through the rolling circle amplification experimentally. Therefore, the circular sequence will have a sub- reading alignment in the same direction, and this sub-reading alignment will be repeated two or more times on the same boundary. 
+
+1)To access ecc_finder accuracy for short read, ecc_finder uses standard method based on discordant pairs and split reads pair at the junctions. The confidence score for the eccDNA locus is assigned to the bona fide locus with an even distribution of split and discordant reads throughout their internal region.
+
 
 
 
