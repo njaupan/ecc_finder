@@ -38,6 +38,26 @@ conda install -n ecc_finder -c bioconda -y minimap2 tidehunter samtools
 ```
 ## <a name="Usage"></a>Usage
 ```
+ecc_Finder: Tool for detecting eccDNA loci using Illumina and ONT sequencing.
+Version: v1.0.0
+
+usage: ecc_finder.py <command> [options]
+    
+    Mapping mode:
+      map-sr         Call candidate eccDNA loci from paired-end short reads
+      map-ont        Call candidate eccDNA loci from Nanopore long reads
+    
+    Assembly mode:
+      asm-sr         Assembly from paired-end short reads
+      asm-ont        Assembly from Nanopore long reads
+      
+    options:
+      -c, --citation  
+      -v, --version
+```
+## <a name="Usage"></a> Long read mapping mode
+
+```
 usage: python eccFinder_map-ont.py <reference.idx> <query.fq>
 
 A tool to detect eccDNA loci using ONT sequencing
