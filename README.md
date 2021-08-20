@@ -38,8 +38,7 @@ conda install -n ecc_finder -c bioconda -y minimap2 tidehunter samtools
 ```
 ## <a name="Usage"></a>Usage
 ```
-python '/home/panpan/Downloads/softwares/ecc_finder/eccFinder_map-ont.py' 
-usage: ecc_finder.py map-ont <reference.idx> <query.fq>
+usage: python eccFinder_map-ont.py <reference.idx> <query.fq>
 
 A tool to detect eccDNA loci using ONT sequencing
 
@@ -75,6 +74,7 @@ output options:
 
 ## <a name="example"></a>Example
 #PRJEB46420
+https://www.ebi.ac.uk/ena/browser/view/PRJEB46420?show=reads
 - Arabidopsis thaliana under heat stress 
 - Triticum aestivum 
 
