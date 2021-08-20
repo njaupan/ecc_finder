@@ -2,12 +2,7 @@
 
 # ecc_finder
 A robust and accurate detection tool to detect eccDNA using Illumina and ONT sequencing
-
-- Long read mapping [map-ont](https://github.com/njaupan/ecc_finder/wiki/map-ont)
-- Short read mapping [map-sr](https://github.com/njaupan/ecc_finder/map-sr) 
-- Long read assembly [asm-ont](https://github.com/njaupan/ecc_finder/wiki/asm-ont)
-- Short read assembly [asm-sr](https://github.com/njaupan/ecc_finder/asm-sr) 
-  
+ 
 ## Table of Contents
 
 - [Introduction](#intro)
@@ -63,43 +58,12 @@ usage: ecc_finder.py <command> [options]
 
 ## Docs
 Please see the [Wiki](https://github.com/njaupan/ecc_finder/wiki) for detailed documentation.
+- Long read mapping [map-ont](https://github.com/njaupan/ecc_finder/wiki/map-ont)
+- Short read mapping [map-sr](https://github.com/njaupan/ecc_finder/map-sr) 
+- Long read assembly [asm-ont](https://github.com/njaupan/ecc_finder/wiki/asm-ont)
+- Short read assembly [asm-sr](https://github.com/njaupan/ecc_finder/asm-sr) 
+ 
 
-## <a name="Usage"></a> Long read mapping mode
-
-```
-usage: python eccFinder_map-ont.py <reference.idx> <query.fq>
-
-A tool to detect eccDNA loci using ONT sequencing
-
-positional arguments:
-  <reference.idx>   index file of reference genome
-  <query.fq>        query fastq file (uncompressed or bgzipped)
-
-optional arguments:
-  -h, --help        show this help message and exit
-
-map options:
-  -t INT            number of CPU threads for mapping mode
-  -m PATH           long read executable [minimap2]
-  --mm2-params STR  minimap2 parameters ['-ax map-ont']
-  -l INT            minimum alignment length [200]
-  -g INT            maximum distance between significant site [100]
-
-validation options:
-  -c INT            minimum copy number of tandem repeat in a long read [2]
-  -e FLT            maximum allowed divergence rate between two consecutive
-                    repeats [0.25]
-  -p INT            minimum period size of tandem repeat (>=2) [30]
-  -P INT            maximum period size of tandem repeat (<=4294967295) [100K]
-  -v INT            coverage validation window size [10000]
-  --min-read INT    filter eccDNA loci by unique mapped read number [3]
-  --min-bound FLT   filter eccDNA loci by boudary coverage [0.8]
-
-output options:
-  -o PATH           output directory [./eccFinder_output]
-  -w                overwrite intermediate files
-  -x X              add prefix to output [ecc.ont]
-```
 
 ## <a name="example"></a>Example
 #PRJEB46420
