@@ -24,9 +24,10 @@ ecc_finder is dedicated to
 <img width="641" alt="ecc_finder_pipeline" src="https://user-images.githubusercontent.com/8072119/124471419-20831e80-dd9d-11eb-89ce-49d5493764d5.png">
 
 Validation 
-1)To access ecc_finder accuracy for long read, the confidence score is assigned by tandem repeat pattern from read alignment. Except for satellites, when performing self-alignment, linear reads will not repeat itself while circular reads will be repeated two or more times because it goes through the rolling circle amplification experimentally. Therefore, the circular sequence will have a sub- reading alignment in the same direction, and this sub-reading alignment will be repeated two or more times on the same boundary. 
 
-1)To access ecc_finder accuracy for short read, ecc_finder uses standard method based on discordant pairs and split reads pair at the junctions. The confidence score for the eccDNA locus is assigned to the bona fide locus with an even distribution of split and discordant reads throughout their internal region.
+1) To access ecc_finder accuracy for long read, the confidence score is assigned by tandem repeat pattern from read alignment. Except for satellites, when performing self-alignment, linear reads will not repeat itself while circular reads will be repeated two or more times because it goes through the rolling circle amplification experimentally. Therefore, the circular sequence will have a sub- reading alignment in the same direction, and this sub-reading alignment will be repeated two or more times on the same boundary. 
+
+2) To access ecc_finder accuracy for short read, the confidence score for the eccDNA locus is assigned to the bona fide locus with an even distribution of split and discordant reads throughout their internal region.
 
 
 
