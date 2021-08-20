@@ -3,6 +3,11 @@
 # ecc_finder
 A robust and accurate detection tool to detect eccDNA using Illumina and ONT sequencing
 
+- Long read mapping [map-ont](https://github.com/njaupan/ecc_finder/wiki/map-ont)
+- Short read mapping [map-sr](https://github.com/njaupan/ecc_finder/map-sr) 
+- Long read assembly [asm-ont](https://github.com/njaupan/ecc_finder/wiki/asm-ont)
+- Short read assembly [asm-sr](https://github.com/njaupan/ecc_finder/asm-sr) 
+  
 ## Table of Contents
 
 - [Introduction](#intro)
@@ -55,6 +60,10 @@ usage: ecc_finder.py <command> [options]
       -c, --citation  
       -v, --version
 ```
+
+## Docs
+Please see the [Wiki](https://github.com/njaupan/ecc_finder/wiki) for detailed documentation.
+
 ## <a name="Usage"></a> Long read mapping mode
 
 ```
