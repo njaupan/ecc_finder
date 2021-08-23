@@ -72,6 +72,7 @@ Please see the [Wiki](https://github.com/njaupan/ecc_finder/wiki) for detailed d
 
 ## Output
 All output is in `eccFinder_output`, or whichever directory `-o` specifies.
+
 **eccDNA.fasta**
 
 >The eccDNA locus in FASTA format.
