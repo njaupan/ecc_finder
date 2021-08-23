@@ -17,8 +17,8 @@ A robust and accurate detection tool to detect eccDNA using Illumina and ONT seq
 We previously developed the mobilome-seq that selectively sequence extrachromosomal circular DNA (eccDNA) forms of actively transposing transposable elements (TEs) in order to characterize active TEs in any plant or animal tissue (Lanciano et al.  PLoS Genetics, 2017).
 
 ecc_finder is dedicated to 
-1) identify eccDNA from Nanopore reads, 
-2) identify eccDNA from from Illumina paried end short reads, 
+1) identify eccDNA from Nanopore reads; 
+2) identify eccDNA from from Illumina paried end short reads; 
 3) provide bona fide locus boundary of eccDNA-producing loci to investigate the origins of eccDNAs.
 
 Validation 
@@ -60,7 +60,6 @@ usage: ecc_finder.py <command> [options]
       asm-ont        Assembly from Nanopore long reads
       
     options:
-      -c, --citation  
       -v, --version
 ```
 
