@@ -69,7 +69,28 @@ Please see the [Wiki](https://github.com/njaupan/ecc_finder/wiki) for detailed d
 - Short read mapping [map-sr](https://github.com/njaupan/ecc_finder/map-sr) 
 - Long read assembly [asm-ont](https://github.com/njaupan/ecc_finder/wiki/asm-ont)
 - Short read assembly [asm-sr](https://github.com/njaupan/ecc_finder/asm-sr) 
- 
+
+## Output
+All output is in `eccFinder_output`, or whichever directory `-o` specifies.
+**eccDNA.fasta**
+
+>The eccDNA locus in FASTA format.
+
+**eccDNA.csv**
+
+>The eccDNA locus in csv format.
+
+
+|Col|Type  |Description                               |
+|--:|:----:|:-----------------------------------------|
+|1  |string|Reference sequence name                   |
+|2  |int   |Reference start on original strand        |
+|3  |int   |Reference start on original strand        |
+|4  |int   |circular read number at the locus         |
+|5  |int   |repeat units of all circular reads        |
+|6  |int   |read coverage at the locus                |
+|7  |int   |eccDNA sequence length                    |
+
 
 
 ## <a name="example"></a>Example
