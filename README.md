@@ -21,11 +21,9 @@ ecc_finder is dedicated to
 2) identify eccDNA from from Illumina paried end short reads, 
 3) provide bona fide locus boundary of eccDNA-producing loci to investigate the origins of eccDNAs.
 
-<img width="641" alt="ecc_finder_pipeline" src="https://user-images.githubusercontent.com/8072119/124471419-20831e80-dd9d-11eb-89ce-49d5493764d5.png">
-
 Validation 
 
-1) To access ecc_finder accuracy for long read, the confidence score is assigned by tandem repeat pattern from read alignment. Except for satellites, when performing self-alignment, linear reads will not repeat itself while circular reads will be repeated two or more times because it goes through the rolling circle amplification experimentally. Therefore, the circular sequence will have a sub- reading alignment in the same direction, and this sub-reading alignment will be repeated two or more times on the same boundary. 
+1) To access ecc_finder accuracy for long read, the confidence score is assigned by tandem repeat pattern from read alignment. Except for satellites, when performing self-alignment, linear reads will not repeat itself while circular reads will be repeated two or more times because it goes through the rolling circle amplification experimentally. Therefore, the circular sequence will have a sub- read alignment in the same direction, and this sub-read alignment will be repeated two or more times on the same boundary. 
 
 2) To access ecc_finder accuracy for short read, the confidence score for the eccDNA locus is assigned to the bona fide locus with an even distribution of split and discordant reads throughout their internal region.
 
@@ -81,6 +79,7 @@ https://www.ebi.ac.uk/ena/browser/view/PRJEB46420?show=reads
 - Arabidopsis thaliana under heat stress 
 - Triticum aestivum 
 
-## Docs
 ## Citation
-Lanciano, S., Carpentier, M.C., Llauro, C., Jobet, E., Robakowska-Hyzorek, D., Lasserre, E., Ghesquière, A., Panaud, O. and Mirouze, M., 2017. Sequencing the extrachromosomal circular mobilome reveals retrotransposon activity in plants. PLoS genetics, 13(2), p.e1006630.
+Panpan Z, Haoran P, Christel L, Etienne B, Marie M. Ecc_finder: a robust and accurate tool for detecting extrachromosomal circular DNA (eccDNA) from sequencing data 
+
+<img width="441" alt="ecc_finder_pipeline" src="https://user-images.githubusercontent.com/8072119/124471419-20831e80-dd9d-11eb-89ce-49d5493764d5.png">
