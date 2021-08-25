@@ -73,7 +73,7 @@ def run_Unicycler(file_prefix,query_file,output_path, num_threads,num_len,overwr
 
 def main():
     description = "A tool to detect eccDNA loci using ONT sequencing"
-    parser = argparse.ArgumentParser(description=description, usage="ecc_finder.py asm-ont <reference.idx> <query.fq> (option)")
+    parser = argparse.ArgumentParser(description=description, usage="ecc_finder.py asm-sr <query.fq1> <query.fq2> (option)")
     parser.add_argument("query", metavar="<query.fq>", nargs='?', default="", type=str, help="query fastq file (uncompressed or bgzipped)")
 
     asm_options = parser.add_argument_group("asm options")   
