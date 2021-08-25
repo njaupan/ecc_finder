@@ -153,7 +153,7 @@ usage: python ecc_finder.py asm-sr <query.fq1> <query.fq2> (option)
 
 
 ## Output
-All output is in `eccFinder_output`, or whichever directory `-o` specifies.
+All output is in `eccFinder_output` for mapping,  `eccFinder_asm_output` for assembly, or whichever directory `-o` specifies.
 
 **Overview**
 
@@ -165,7 +165,6 @@ All output is in `eccFinder_output`, or whichever directory `-o` specifies.
 |4  |file  |FASTA file of the eccDNA sequence: ecc.{ont,sr}.fasta        |
 |5  |file  |BED file of genomic enriched sites: ecc.{ont,sr}.site.bed|
 |6  |file  |Plot of the size distribution: ecc.{ont,sr}.distribution.png |
-
 
 **ecc.{ont,sr}.fasta **
 
