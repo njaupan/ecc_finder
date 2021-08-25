@@ -61,7 +61,7 @@ conda activate ecc_finder
 ```
 ## Video about how to install and run ecc_finder
 
-You can watch this video [ecc_finder_install_Video](https://www.youtube.com/watch?v=nOmYEpaas0w) about the installation and usuage of ecc_finder, which takes 2 minutes to install on a Mac.
+You can watch this video:  [ecc_finder_install_Video](https://www.youtube.com/watch?v=nOmYEpaas0w) about the installation and usuage of ecc_finder, which takes 2 minutes to install on a Mac.
 
 
 
@@ -121,7 +121,7 @@ usage: python ecc_finder.py map-ont <reference.idx> <query.fq> -r reference.fast
 
 Algorithm and usage in details, please see the [Short-read-mapping](https://github.com/njaupan/ecc_finder/wiki/Short-read-mapping)
 
-Run Example2: watch the video [Long-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw) using the Arabidopsis eccDNA sequencing subsample in the folder test_samples.
+Run Example2: watch the video [Short-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw) using the Arabidopsis eccDNA sequencing subsample in the folder test_samples.
 
 
 ```
