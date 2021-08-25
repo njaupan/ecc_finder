@@ -1,4 +1,3 @@
-
 # ecc_finder
 A robust and accurate detection tool to detect eccDNA using Illumina and ONT sequencing
  
@@ -62,7 +61,7 @@ conda activate ecc_finder
 ```
 ## Video about how to install and run ecc_finder
 
-You can watch this video about successful installation ecc_finder, see the [video](https://www.youtube.com/watch?v=22RsCaVqfp8) for detailed documentation.
+You can watch this video about the installation and usuage of ecc_finder, see the [video](https://www.youtube.com/watch?v=22RsCaVqfp8) for detailed documentation.
 
 
 ## Index
