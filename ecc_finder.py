@@ -26,7 +26,6 @@ import sys
 import subprocess
 from eccFinder_lib.utilities import get_eccFinder_version
 
-sys.path.append('/Users/panpanzhang/Documents/softwares/ecc_finder')
 
 def main():
     VERSION = get_eccFinder_version()
