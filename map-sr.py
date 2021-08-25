@@ -75,7 +75,7 @@ def run_samtools(file_prefix,align_path, num_threads, overwrite_files):
     else:     
         pysam.sort("-@", str(num_threads),"-n",  "-o", align_path +file_prefix+".bam", align_path +file_prefix+".sam", catch_stdout=False)
 
-def run_Genrich(file_prefix,align_path,output_path,num_threads, min_peak,max_dist,max_pvalue,overwrite_files):
+def run_Genrich(file_prefix,align_path,output_path,peak_path,num_threads, min_peak,max_dist,max_pvalue,overwrite_files):
     """ Detecting sites of genomic enrichment. """
     if os.path.isfile(output_path +file_prefix+".site.bed"):
         if not overwrite_files:
@@ -84,44 +84,44 @@ def run_Genrich(file_prefix,align_path,output_path,num_threads, min_peak,max_dis
             log("INFO", "Overwriting pre-existing file: " + output_path +file_prefix+".site.bed")
             GR_params = " -v "
             GR_params += " -l " + str(min_peak)+" -g " + str(max_dist) +" -p " + str(max_pvalue) 
-            GR_cmd = "Genrich -t "+ align_path +file_prefix+".bam" + GR_params+ " -o "+ output_path +file_prefix+".site"
+            GR_cmd = "Genrich -t "+ align_path +file_prefix+".bam" + GR_params+ " -o "+ peak_path +file_prefix+".site"
             subprocess.call(GR_cmd, shell=True) 
-            cmd1 = "cut -f1-3 " + output_path +file_prefix+".site" + " > " +output_path +file_prefix+".site.bed"
+            cmd1 = "cut -f1-3 " + peak_path +file_prefix+".site" + " > " +output_path +file_prefix+".site.bed"
             os.popen("{inS} ".format(inS=cmd1))
     else:          
         GR_params = " -v "
         GR_params += " -l " + str(min_peak)+" -g " + str(max_dist) +" -p " + str(max_pvalue)    
-        GR_cmd = "Genrich -t "+align_path +file_prefix+".bam" + GR_params+ " -o "+ output_path +file_prefix+".site"
+        GR_cmd = "Genrich -t "+align_path +file_prefix+".bam" + GR_params+ " -o "+ peak_path +file_prefix+".site"
         subprocess.call(GR_cmd, shell=True) 
-        cmd1 = "cut -f1-3 " + output_path +file_prefix+".site" + " > " +output_path +file_prefix+".site.bed"
+        cmd1 = "cut -f1-3 " + peak_path +file_prefix+".site" + " > " +output_path +file_prefix+".site.bed"
         os.popen("{inS} ".format(inS=cmd1))
 
-def run_bedtoolss(file_prefix,align_path,output_path, num_threads, overwrite_files):
+def run_bedtoolss(file_prefix,align_path,num_threads, overwrite_files):
     """ sort, filter and index alignments. """
-    if os.path.isfile(output_path +file_prefix+".bam.bed"):
+    if os.path.isfile(align_path +file_prefix+".bam.bed"):
         if not overwrite_files:
-            log("INFO", "Retaining pre-existing file: " + output_path +file_prefix+".bam.bed")
+            log("INFO", "Retaining pre-existing file: " + align_path +file_prefix+".bam.bed")
         else:
-            log("INFO", "Overwriting pre-existing file: " + output_path +file_prefix+".bam.bed")
+            log("INFO", "Overwriting pre-existing file: " + align_path +file_prefix+".bam.bed")
             #pybedtools.BedTool(output_path +file_prefix+".bam").bam_to_bed().saveas(output_path +file_prefix+".bam.bed")
             cmd1 = "bedtools bamtobed -i "+ align_path +file_prefix+".bam" 
-            cmd2 = "sed 's|/|\\t|g' |cut -f1-5,7 >" +output_path +file_prefix+".bam.bed"
+            cmd2 = "sed 's|/|\\t|g' |cut -f1-5,7 >" +align_path +file_prefix+".bam.bed"
             beds = "{inS} |{sed} ".format(inS=cmd1, sed=cmd2)
             ps = subprocess.Popen(beds,shell=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
             output = ps.communicate()[0]
     else:
         #Bamtobed and seperate forward and reverse pair from read ID
         cmd1 = "bedtools bamtobed -i "+ align_path +file_prefix+".bam" 
-        cmd2 = "sed 's|/|\\t|g' |cut -f1-5,7 >" +output_path +file_prefix+".bam.bed"
+        cmd2 = "sed 's|/|\\t|g' |cut -f1-5,7 >" +align_path +file_prefix+".bam.bed"
         beds = "{inS} |{sed} ".format(inS=cmd1, sed=cmd2)
         ps = subprocess.Popen(beds,shell=True,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
         output = ps.communicate()[0]
 
-def run_split(file_prefix,output_path, num_threads, overwrite_files):
-    if os.path.isfile(output_path +file_prefix+".split.bed"):
-        log("INFO", "Retaining pre-existing file: " + output_path +file_prefix+".split.bed")
+def run_split(file_prefix,align_path,peak_path, num_threads, overwrite_files):
+    if os.path.isfile(peak_path +file_prefix+".split.bed"):
+        log("INFO", "Retaining pre-existing file: " + peak_path +file_prefix+".split.bed")
     else:
-        df=pybedtools.BedTool(output_path +file_prefix+".bam.bed").to_dataframe()
+        df=pybedtools.BedTool(align_path +file_prefix+".bam.bed").to_dataframe()
         #Based on chrom and read ID, sort alignment by base and merge alignment to avoid overlapped reads
         df['chrom'] = df[['chrom','name']].apply(lambda x : '{}__{}'.format(x[0],x[1]), axis=1) 
         x =BedTool.sort(BedTool.from_dataframe(df))
@@ -140,13 +140,13 @@ def run_split(file_prefix,output_path, num_threads, overwrite_files):
         splitM[['chrom','read']] = splitM['chrom'].str.split('__',expand=True)
         splitM['length'] = splitM.end-splitM.start
         splitM =splitM.sort_values(by=['chrom', 'start'])
-        splitM.to_csv(output_path +file_prefix+".split.bed", header=False, index = False, sep='\t') 
+        splitM.to_csv(peak_path +file_prefix+".split.bed", header=False, index = False, sep='\t') 
         
-def run_disc(file_prefix,output_path, num_threads, overwrite_files):
-    if os.path.isfile(output_path +file_prefix+".disc.bed"):
-        log("INFO", "Retaining pre-existing file: " + output_path +file_prefix+".disc.bed")
+def run_disc(file_prefix,align_path,peak_path, num_threads, overwrite_files):
+    if os.path.isfile(peak_path +file_prefix+".disc.bed"):
+        log("INFO", "Retaining pre-existing file: " + peak_path +file_prefix+".disc.bed")
     else:
-        raw=output_path +file_prefix+".bam.bed"
+        raw=align_path +file_prefix+".bam.bed"
         df=pybedtools.BedTool(raw).to_dataframe()
         #Based on chrom and read ID, sort alignment by base and merge alignment to avoid overlapped reads
         df['chrom'] = df[['chrom','name']].apply(lambda x : '{}__{}'.format(x[0],x[1]), axis=1) 
@@ -164,7 +164,7 @@ def run_disc(file_prefix,output_path, num_threads, overwrite_files):
         disc[['chrom','read']] = disc['chrom'].str.split('__',expand=True)
         disc['length'] = disc.end-disc.start
         disc =disc.sort_values(by=['chrom', 'start'])
-        disc.to_csv(output_path +file_prefix+".disc.bed", header=False, index = False, sep='\t') 
+        disc.to_csv(peak_path +file_prefix+".disc.bed", header=False, index = False, sep='\t') 
 
 def read_files(filelist):
     dfs = []
@@ -174,21 +174,21 @@ def read_files(filelist):
     from functools import reduce
     return reduce(lambda  left,right: pd.merge(left,right,on=['Chr', 'start','end'],how='inner'), dfs).fillna(0)
 
-def run_intersect(file_prefix,output_path, num_threads, min_read,overwrite_files):
+def run_intersect(file_prefix,peak_path,output_path, num_threads, min_read,overwrite_files):
     """ sort, filter and index alignments. """
     if os.path.isfile(output_path +file_prefix+".csv"):
         log("INFO", "Retaining pre-existing file: " + output_path +file_prefix+".csv")
     else:
         a=pybedtools.example_bedtool(output_path +file_prefix+".site.bed")
-        b=pybedtools.example_bedtool(output_path +file_prefix+".split.bed")
-        see=a.intersect(b, wb=True,wa=True)
+        b=pybedtools.example_bedtool(peak_path +file_prefix+".split.bed")
+        see=a.intersect(b, wb=True,wa=True,nonamecheck=True)
         s=pybedtools.BedTool(see).to_dataframe()
         s['cov'] = (s.strand-s.score)/(s.end-s.start)*100
         s=s[(s['cov']<=100)]
         s=BedTool.from_dataframe(s).groupby(g = [1,2,3], c = [9],o = ['count_distinct'] ).saveas(output_path +file_prefix+".split.num.bed")
 
-        c=pybedtools.example_bedtool(output_path +file_prefix+".disc.bed")
-        see=a.intersect(c, wb=True,wa=True)
+        c=pybedtools.example_bedtool(peak_path +file_prefix+".disc.bed")
+        see=a.intersect(c, wb=True,wa=True,nonamecheck=True)
         d=pybedtools.BedTool(see).to_dataframe()
         d['cov'] = (d.strand-d.score)/(d.end-d.start)*100
         d=d[ (d['cov']<=100)]
@@ -240,7 +240,7 @@ def main():
     out_options = parser.add_argument_group("output options")
     out_options.add_argument("-o", metavar="PATH", type=str, default="eccFinder_output", help="output directory [./eccFinder_output]")
     out_options.add_argument("-w", action='store_true', default=False, help="overwrite intermediate files")
-    out_options.add_argument("-x", type=str, default="ecc.ill", help="add prefix to output [ecc.ill]")
+    out_options.add_argument("-x", type=str, default="ecc.sr", help="add prefix to output [ecc.sr]")
 
     args = parser.parse_args()
 
@@ -289,6 +289,13 @@ def main():
         os.makedirs(output_path+"align_files/")
     align_path = os.path.abspath(args.o) + "/align_files/"
 
+
+    peak_path = os.path.abspath(args.o) + "/peak_files/"
+    if not os.path.isdir(output_path+"peak_files/"):
+        os.makedirs(output_path+"peak_files/")
+    peak_path = os.path.abspath(args.o) + "/peak_files/"
+
+
     overwrite_files = args.w
     file_prefix = args.x
 
@@ -335,19 +342,21 @@ def main():
 
     # Check read pair and read pair orientation
     log("INFO", "Check read pair and read pair orientation")
-    run_bedtoolss(file_prefix,align_path,output_path, num_threads, overwrite_files)
+    run_bedtoolss(file_prefix,align_path, num_threads, overwrite_files)
 
-    # Detect split and discordant reads accordingly
-    log("INFO", "Detect split reads")
-    run_split(file_prefix,output_path, num_threads, overwrite_files)
-    log("INFO", "Detect discordant reads")
-    run_disc(file_prefix,output_path, num_threads, overwrite_files)
     # Detect siginificant sites of genomic enrichment.
     log("INFO", "Detecting sites of genomic enrichment")
-    run_Genrich(file_prefix,align_path,output_path,num_threads, min_peak,max_dist,max_pvalue,overwrite_files)
+    run_Genrich(file_prefix,align_path,output_path,peak_path,num_threads, min_peak,max_dist,max_pvalue,overwrite_files)
+    
+    # Detect split and discordant reads accordingly
+    log("INFO", "Detect split reads")
+    run_split(file_prefix,align_path,peak_path, num_threads, overwrite_files)
+    log("INFO", "Detect discordant reads")
+    run_disc(file_prefix,align_path,peak_path, num_threads, overwrite_files)
+
     # Filtering eccDNA loci by boundary coverage.
     log("INFO", "Filtering eccDNA locus by number of split and discordant reads")
-    run_intersect(file_prefix,output_path, num_threads, min_read,overwrite_files)
+    run_intersect(file_prefix,peak_path,output_path, num_threads, min_read,overwrite_files)
     log("INFO", "Consider false positives from repetitive loci")
     #run_repeat(file_prefix,output_path, num_threads, min_read,min_cov,overwrite_files)
     run_getFasta(output_path, file_prefix ,ref_genome,overwrite_files)
