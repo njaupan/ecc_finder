@@ -63,13 +63,13 @@ conda activate ecc_finder
 
 You can watch this video about the installation and usuage of ecc_finder, see the [ecc_finder_install_Video](https://www.youtube.com/watch?v=nOmYEpaas0w) for detailed documentation, which takes 2 minutes to install on a Mac.
 
-Example1 run: using Arabidopsis test sequences in the folder test_samples, see the [Long-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
+Run Example1: Use subsample from Arabidopsis eccDNA sequencing in the folder test_samples, see the [Long-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
 
-Example2 run: using Arabidopsis test sequences in the folder test_samples, see the [Short-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
+Run Example2: Use subsample from Arabidopsis eccDNA sequencing in the folder test_samples, see the [Short-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
 
-Example3 run: using Arabidopsis test sequences in the folder test_samples, see the [Long-read-assembly_Video_example](https://www.youtube.com/watch?v=11O_lkUgOwY).
+Run Example3: Use subsample from Arabidopsis eccDNA sequencing in the folder test_samples, see the [Long-read-assembly_Video_example](https://www.youtube.com/watch?v=11O_lkUgOwY).
 
-Example4 run: using Arabidopsis test sequences in the folder test_samples, see the [Short-read-assembly_Video_example](https://www.youtube.com/watch?v=4fiYcFxxqDQ).
+Run Example4: Use subsample from Arabidopsis eccDNA sequencing in the folder test_samples, see the [Short-read-assembly_Video_example](https://www.youtube.com/watch?v=4fiYcFxxqDQ).
 
 ## Index
 ```bash
