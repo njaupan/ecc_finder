@@ -61,7 +61,9 @@ conda activate ecc_finder
 ```
 ## Video about how to install and run ecc_finder
 
-You can watch this video about the installation and usuage of ecc_finder, see the [video](https://www.youtube.com/watch?v=nOmYEpaas0w) for detailed documentation, which takes 2 minutes to install on a Mac.
+You can watch this video about the installation and usuage of ecc_finder, see the [video_install](https://www.youtube.com/watch?v=nOmYEpaas0w) for detailed documentation, which takes 2 minutes to install on a Mac.
+
+Example: run ecc_finder using test samples in the folder test_samples, see the [Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
 
 
 ## Index
@@ -108,8 +110,6 @@ Please see the [Wiki](https://github.com/njaupan/ecc_finder/wiki) for detailed d
 ## <a name="Long-read-mapping"></a>Long-read-mapping
 
 Algorithm and usage in details, please see the [Long-read-mapping](https://github.com/njaupan/ecc_finder/wiki/Long-read-mapping)
-
-Example: run ecc_finder using test samples in the folder test_samples, see the [Video](https://www.youtube.com/watch?v=QUWFUZ19-yw).
 
 ```
 usage: python ecc_finder.py map-ont <reference.idx> <query.fq> -r reference.fasta (option)
