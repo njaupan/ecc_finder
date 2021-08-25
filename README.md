@@ -109,6 +109,8 @@ Please see the [Wiki](https://github.com/njaupan/ecc_finder/wiki) for detailed d
 
 Algorithm and usage in details, please see the [Long-read-mapping](https://github.com/njaupan/ecc_finder/wiki/Long-read-mapping)
 
+Example: run ecc_finder using test samples in the folder test_samples, see the [Video](https://www.youtube.com/watch?v=QUWFUZ19-yw).
+
 ```
 usage: python ecc_finder.py map-ont <reference.idx> <query.fq> -r reference.fasta (option)
 
