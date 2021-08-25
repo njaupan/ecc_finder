@@ -63,17 +63,7 @@ conda activate ecc_finder
 
 You can watch this video about the installation and usuage of ecc_finder, see the [ecc_finder_install_Video](https://www.youtube.com/watch?v=nOmYEpaas0w) for detailed documentation, which takes 2 minutes to install on a Mac.
 
-Run Example1: Use subsample of Arabidopsis eccDNA sequencing in the folder test_samples, 
-see the [Long-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
 
-Run Example2: Use subsample of Arabidopsis eccDNA sequencing in the folder test_samples, 
-see the [Short-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
-
-Run Example3: Use subsample of Arabidopsis eccDNA sequencing in the folder test_samples, 
-see the [Long-read-assembly_Video_example](https://www.youtube.com/watch?v=11O_lkUgOwY).
-
-Run Example4: Use subsample of Arabidopsis eccDNA sequencing in the folder test_samples, 
-see the [Short-read-assembly_Video_example](https://www.youtube.com/watch?v=4fiYcFxxqDQ).
 
 ## Index
 ```bash
@@ -120,8 +110,7 @@ Please see the [Wiki](https://github.com/njaupan/ecc_finder/wiki) for detailed d
 
 Algorithm and usage in details, please see the [Long-read-mapping](https://github.com/njaupan/ecc_finder/wiki/Long-read-mapping)
 
-Run Example1: Use subsample of Arabidopsis eccDNA sequencing in the folder test_samples, 
-see the [Long-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
+Run Example1: watch the video [Long-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw) using the Arabidopsis eccDNA sequencing subsample in the folder test_samples.
 
 ```
 usage: python ecc_finder.py map-ont <reference.idx> <query.fq> -r reference.fasta (option)
@@ -132,8 +121,8 @@ usage: python ecc_finder.py map-ont <reference.idx> <query.fq> -r reference.fast
 
 Algorithm and usage in details, please see the [Short-read-mapping](https://github.com/njaupan/ecc_finder/wiki/Short-read-mapping)
 
-Run Example2: Use subsample of Arabidopsis eccDNA sequencing in the folder test_samples, 
-see the [Short-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
+Run Example2: watch the video [Long-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw) using the Arabidopsis eccDNA sequencing subsample in the folder test_samples.
+
 
 ```
 usage: python ecc_finder.py map-sr <reference.idx> <query.fq1> <query.fq2> -r reference.fasta (option)
@@ -144,8 +133,7 @@ usage: python ecc_finder.py map-sr <reference.idx> <query.fq1> <query.fq2> -r re
 Algorithm and usage in details, please see the [Long-read-assembly](https://github.com/njaupan/ecc_finder/wiki/Long-read-assembly)
 
 
-Run Example3: Use subsample of Arabidopsis eccDNA sequencing in the folder test_samples, 
-see the [Long-read-assembly_Video_example](https://www.youtube.com/watch?v=11O_lkUgOwY).
+Run Example3: watch the video [Long-read-assembly_Video_example](https://www.youtube.com/watch?v=11O_lkUgOwY) using the Arabidopsis eccDNA sequencing subsample in the folder test_samples.
 
 ```
 usage: python ecc_finder.py asm-ont <query.fq> (option)
@@ -156,8 +144,7 @@ usage: python ecc_finder.py asm-ont <query.fq> (option)
 
 Algorithm and usage in details, please see the [Short-read-assembly](https://github.com/njaupan/ecc_finder/wiki/Short-read-assembly)
 
-Run Example4: Use subsample of Arabidopsis eccDNA sequencing in the folder test_samples, 
-see the [Short-read-assembly_Video_example](https://www.youtube.com/watch?v=4fiYcFxxqDQ).
+Run Example4: watch the video [Short-read-assembly_Video_example](https://www.youtube.com/watch?v=4fiYcFxxqDQ) using the Arabidopsis eccDNA sequencing subsample in the folder test_samples.
 
 ```
 usage: python ecc_finder.py asm-sr <query.fq1> <query.fq2> (option)
