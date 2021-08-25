@@ -8,7 +8,6 @@ parser.add_argument('-i', action='store', dest='fasta_file', help='Input fasta f
 result = parser.parse_args()
 
 f_open = open(result.fasta_file, "r")
-
 for record in SeqIO.parse(f_open, "fasta"):
    id = record.id+".fasta"
    seq = record.seq
@@ -17,4 +16,3 @@ for record in SeqIO.parse(f_open, "fasta"):
    id_file.close()
 
 f_open.close()
-
