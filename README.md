@@ -61,7 +61,7 @@ conda activate ecc_finder
 ```
 ## Video about how to install and run ecc_finder
 
-You can watch this video about the installation and usuage of ecc_finder, see the [ecc_finder_install_Video](https://www.youtube.com/watch?v=nOmYEpaas0w) for detailed documentation, which takes 2 minutes to install on a Mac.
+You can watch this video [ecc_finder_install_Video](https://www.youtube.com/watch?v=nOmYEpaas0w) about the installation and usuage of ecc_finder, which takes 2 minutes to install on a Mac.
 
 
 
