@@ -10,14 +10,11 @@ import sys
 
 complements = str.maketrans("ACGTNURYSWKMBVDHacgtnuryswkmbvdh", "TGCANAYRSWMKVBHDtgcanayrswmkvbhd")
 
-
 def get_eccFinder_version():
     return 'v1.0.0'
 
-
 def reverse_complement(seq):
     return seq.translate(complements)[::-1]
-
 
 def run(cmd):
     if not isinstance(cmd, list):
@@ -27,7 +24,6 @@ def run(cmd):
     if subprocess.call(cmd) != 0:
         raise RuntimeError("Failed : %s" % " ".join(cmd))
     log("INFO", "Finished running : %s" % " ".join(cmd))
-
 
 def run_oe(cmd, out, err):
     """ Run a command and redirect stdout/stderr. """
@@ -80,7 +76,6 @@ def run_oae(cmd, out, err):
 
     f_out.close()
     f_err.close()
-
 
 def log(level, message):
     """ Log messages to standard error. """
