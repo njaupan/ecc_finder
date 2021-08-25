@@ -11,7 +11,6 @@ import sys
 
 from eccFinder_lib.utilities import run_oe, run_e, log
 
-
 class Spliter:
 
     __metaclass__ = abc.ABCMeta
@@ -27,7 +26,6 @@ class Spliter:
         self.Split_exec = None
         self.out_log = None
         self._update_attrs()
-
 
     @abc.abstractmethod
     def _update_attrs(self):
@@ -45,7 +43,6 @@ class Spliter:
     def compile_command(self):
         pass
 
-
     def exec_is_valid(self):
         return True
 
@@ -62,8 +59,6 @@ class Spliter:
                     run_oe(self.compile_command(), self.out_file, self.out_log)
                 else:
                     log("INFO", "Retaining pre-existing file: " + self.out_file)
-
-
 
 class tidehunter(Spliter):
 
@@ -93,4 +88,3 @@ class tidehunter(Spliter):
                     run_oe(self.compile_command(), self.out_file, self.out_log)
                 else:
                     log("INFO", "Retaining pre-existing file: " + self.out_file)
-
