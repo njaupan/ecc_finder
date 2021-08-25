@@ -48,7 +48,6 @@ usage: ecc_finder.py <command> [options]
       asm-ont        Assembly from Nanopore long reads
       
     options:
-      -c, --citation  
       -v, --version""" % VERSION
 
     arg_len = len(sys.argv)
