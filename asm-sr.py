@@ -83,8 +83,8 @@ def main():
     parser.add_argument("query2", metavar="<query2.fq>", nargs='?', default="", type=str, help="query reverse fastq file (uncompressed or bgzipped)")
 
     asm_options = parser.add_argument_group("asm options")   
-    asm_options.add_argument('-t', metavar="INT",type=int, default=100,
-                            help='number of CPU threads for asmping mode')
+    asm_options.add_argument('-t', metavar="INT",type=int, default=get_default_thread(),
+                            help='number of CPU threads for mapping mode')
     asm_options.add_argument('-l', metavar="INT",type=int, default=get_default_thread(),help='minimum fasta length of assembly[100]')
 
     out_options = parser.add_argument_group("output options")
