@@ -11,7 +11,6 @@ import sys
 
 from eccFinder_lib.utilities import run_oe, run_e, log
 
-
 class Peaker:
 
     __metaclass__ = abc.ABCMeta
@@ -63,8 +62,6 @@ class Peaker:
                 else:
                     log("INFO", "Retaining pre-existing file: " + self.out_file)
 
-
-
 class genrich(Peaker):
 
     def _update_attrs(self):
@@ -93,4 +90,3 @@ class genrich(Peaker):
                     run_oe(self.compile_command(), self.out_file, self.out_log)
                 else:
                     log("INFO", "Retaining pre-existing file: " + self.out_file)
-
