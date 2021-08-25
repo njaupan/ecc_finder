@@ -82,7 +82,6 @@ usage: ecc_finder.py <command> [options]
                 subcmd = ["python", "map-ont.py"] + sys.argv[2:] 
                 subcmd_out = subprocess.run(subcmd, stdout=subprocess.PIPE).stdout.decode()
 
-
         elif cmd == "asm-sr":
             if sys.argv[2:] ==[] or sys.argv[2:] ==['-h'] or sys.argv[2:] ==['-help']:
                 subcmd = "python asm-sr.py"
@@ -91,7 +90,6 @@ usage: ecc_finder.py <command> [options]
                 subcmd = ["python", "asm-sr.py"] + sys.argv[2:] 
                 subcmd_out = subprocess.run(subcmd, stdout=subprocess.PIPE).stdout.decode()
 
-
         elif cmd == "asm-ont":
             if sys.argv[2:] ==[] or sys.argv[2:] ==['-h'] or sys.argv[2:] ==['-help']:
                 subcmd = "python " +"asm-ont.py"
@@ -99,7 +97,6 @@ usage: ecc_finder.py <command> [options]
             else:
                 subcmd = ["python", "asm-ont.py"] + sys.argv[2:] 
                 subcmd_out = subprocess.run(subcmd, stdout=subprocess.PIPE).stdout.decode()
-
 
         else:
             print(description)
