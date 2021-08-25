@@ -4,7 +4,6 @@ from setuptools import setup
 import glob
 
 from eccFinder_lib.utilities import get_eccFinder_version
-
 scripts = glob.glob("*.p*")
 
 setup(
