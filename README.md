@@ -69,7 +69,7 @@ You can watch this video about the installation and usuage of ecc_finder, see th
 # before starting, create index file for the reference genome to reduce mapping time.
 
 # Long reads: 
-minimap2 -x map-ont -d reference.idx reference.fa -I 4G 
+minimap2 -x map-ont -d reference.ont.idx reference.fa -I 4G 
 
 # Short reads:
 # You can choose minimap2 short read mapping mode to speed up given a large genome 
@@ -77,7 +77,7 @@ minimap2 -x map-ont -d reference.idx reference.fa -I 4G
 
 bwa index -p reference.bwa.idx reference.fa 
 
-minimap2 -x sr -d reference.mmi.idx reference.fa -I 4G 
+minimap2 -x sr -d reference.sr.idx reference.fa -I 4G 
 
 ```
 ## <a name="Usage"></a>Usage
