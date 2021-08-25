@@ -110,6 +110,7 @@ Please see the [Wiki](https://github.com/njaupan/ecc_finder/wiki) for detailed d
 
 Algorithm and usage in details, please see the [Long-read-mapping](https://github.com/njaupan/ecc_finder/wiki/Long-read-mapping)
 
+Run Example1: watch the video [Long-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw) using the Arabidopsis eccDNA sequencing subsample in the folder test_samples.
 
 ```
 usage: python ecc_finder.py map-ont <reference.idx> <query.fq> -r reference.fasta (option)
@@ -119,6 +120,9 @@ usage: python ecc_finder.py map-ont <reference.idx> <query.fq> -r reference.fast
 ## <a name="Short-read-mapping"></a>Short-read-mapping
 
 Algorithm and usage in details, please see the [Short-read-mapping](https://github.com/njaupan/ecc_finder/wiki/Short-read-mapping)
+
+Run Example2: watch the video [Short-read-mapping_Video_example](https://www.youtube.com/watch?v=XnIvlHGYQvw) using the Arabidopsis eccDNA sequencing subsample in the folder test_samples.
+
 
 ```
 usage: python ecc_finder.py map-sr <reference.idx> <query.fq1> <query.fq2> -r reference.fasta (option)
@@ -140,7 +144,7 @@ usage: python ecc_finder.py asm-ont <query.fq> (option)
 
 Algorithm and usage in details, please see the [Short-read-assembly](https://github.com/njaupan/ecc_finder/wiki/Short-read-assembly)
 
-Run Example4: watch the video [Short-read-assembly_Video_example](https://www.youtube.com/watch?v=4fiYcFxxqDQ) using the Arabidopsis eccDNA sequencing subsample in the folder test_samples.
+Run Example4: watch the video [Short-read-assembly_Video_example](https://www.youtube.com/watch?v=vCyjzNrAYXo) using the Arabidopsis eccDNA sequencing subsample in the folder test_samples.
 
 ```
 usage: python ecc_finder.py asm-sr <query.fq1> <query.fq2> (option)
