@@ -6,7 +6,6 @@ import shutil
 
 from eccFinder_lib.utilities import run_oe, run_e, log
 
-
 class Aligner:
 
     __metaclass__ = abc.ABCMeta
