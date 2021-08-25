@@ -77,7 +77,7 @@ minimap2 -x map-ont -d reference.ont.idx reference.fa -I 4G
 # You can choose minimap2 short read mapping mode to speed up given a large genome 
 # build index accordingly
 
-bwa index -p reference.bwa.idx reference.fa 
+bwa index reference.fa 
 
 minimap2 -x sr -d reference.sr.idx reference.fa -I 4G 
 
