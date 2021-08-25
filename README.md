@@ -61,10 +61,12 @@ conda activate ecc_finder
 ```
 ## Video about how to install and run ecc_finder
 
-You can watch this video about the installation and usuage of ecc_finder, see the [Video_install](https://www.youtube.com/watch?v=nOmYEpaas0w) for detailed documentation, which takes 2 minutes to install on a Mac.
+You can watch this video about the installation and usuage of ecc_finder, see the [ecc_finder_install_Video](https://www.youtube.com/watch?v=nOmYEpaas0w) for detailed documentation, which takes 2 minutes to install on a Mac.
 
-Example run: using test samples from Arabidopsis in the folder test_samples, see the [Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
-
+Example1 run: using Arabidopsis test sequences in the folder test_samples, see the [Long-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
+Example2 run: using Arabidopsis test sequences in the folder test_samples, see the [Short-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
+Example3 run: using Arabidopsis test sequences in the folder test_samples, see the [Long-read-assembly_Video_example](https://www.youtube.com/watch?v=11O_lkUgOwY).
+Example4 run: using Arabidopsis test sequences in the folder test_samples, see the [Short-read-assembly_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
 
 ## Index
 ```bash
@@ -111,7 +113,7 @@ Please see the [Wiki](https://github.com/njaupan/ecc_finder/wiki) for detailed d
 
 Algorithm and usage in details, please see the [Long-read-mapping](https://github.com/njaupan/ecc_finder/wiki/Long-read-mapping)
 
-Example run: using test samples from Arabidopsis in the folder test_samples, see the [Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
+Example1 run: using Arabidopsis test sequences in the folder test_samples, see the [Long-read-mapping_Video_example](https://www.youtube.com/watch?v=QUWFUZ19-yw).
 
 ```
 usage: python ecc_finder.py map-ont <reference.idx> <query.fq> -r reference.fasta (option)
@@ -130,6 +132,7 @@ usage: python ecc_finder.py map-sr <reference.idx> <query.fq1> <query.fq2> -r re
 
 Algorithm and usage in details, please see the [Long-read-assembly](https://github.com/njaupan/ecc_finder/wiki/Long-read-assembly)
 
+Example3 run: using Arabidopsis test sequences in the folder test_samples, see the [Long-read-assembly_Video_example](https://www.youtube.com/watch?v=11O_lkUgOwY).
 ```
 usage: python ecc_finder.py asm-ont <query.fq> (option)
 
@@ -138,6 +141,8 @@ usage: python ecc_finder.py asm-ont <query.fq> (option)
 ## <a name="Short-read-assembly"></a>Short-read-assembly
 
 Algorithm and usage in details, please see the [Short-read-assembly](https://github.com/njaupan/ecc_finder/wiki/Short-read-assembly)
+
+Example4 run: using Arabidopsis test sequences in the folder test_samples, see the [Short-read-assembly_Video_example](https://www.youtube.com/watch?v=11O_lkUgOwY).
 
 ```
 usage: python ecc_finder.py asm-sr <query.fq1> <query.fq2> (option)
