@@ -29,7 +29,7 @@ Validation
 
 2) To access ecc_finder accuracy for short read, the confidence score for the eccDNA locus is assigned to the bona fide locus with an even distribution of split and discordant reads throughout their internal region.
 
-<img width="433" alt="ecc_finder_pipeline" src="https://user-images.githubusercontent.com/8072119/130788739-9d5a5fe8-f971-47c6-926a-8b8e3d1716b4.png">
+<img width="453" alt="ecc_finder_pipeline" src="https://user-images.githubusercontent.com/8072119/130788739-9d5a5fe8-f971-47c6-926a-8b8e3d1716b4.png">
 
 
 ## Getting Started
