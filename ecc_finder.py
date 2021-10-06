@@ -26,7 +26,6 @@ import sys
 import subprocess
 from eccFinder_lib.utilities import get_eccFinder_version
 
-
 def main():
     VERSION = get_eccFinder_version()
     CITATION = """
