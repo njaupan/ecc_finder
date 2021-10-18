@@ -125,10 +125,10 @@ Run Example2: watch the video [Short-read-mapping_Video_example](https://www.you
 
 Note that because the output from bwa index, it will create 5 files with appendix: reference.fa.bwt, reference.fa.amb, reference.fa.ann, reference.fa.pac and reference.fa.sa
 
-So the <reference.fa> here represents the whole index output for bwa aligner, and "-r reference.fna" represents the reference fasta file
+So the <reference.fa> here represents the whole index output for bwa aligner, and "-r reference.fa" represents the reference fasta file
 
 ```
-usage: python ecc_finder.py map-sr <reference.fa> <query.fq1> <query.fq2> -r reference.fasta (option)
+usage: python ecc_finder.py map-sr <reference.fa> <query.fq1> <query.fq2> -r reference.fa (option)
 
 ```
 
