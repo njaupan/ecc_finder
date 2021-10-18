@@ -130,6 +130,10 @@ So the <reference.fa> here represents the whole index output for bwa aligner, an
 ```
 usage: python ecc_finder.py map-sr <reference.fa> <query.fq1> <query.fq2> -r reference.fa (option)
 
+or to speed up:
+
+python ecc_finder.py map-sr <reference.sr.idx> <query.fq1> <query.fq2> -r reference.fa --aligner minimap2
+
 ```
 
 
