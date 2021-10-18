@@ -128,11 +128,13 @@ Note that because the output from bwa index, it will create 5 files with appendi
 So the <reference.fa> here represents the whole index output for bwa aligner, and "-r reference.fa" represents the reference fasta file
 
 ```
-usage: python ecc_finder.py map-sr <reference.fa> <query.fq1> <query.fq2> -r reference.fa (option)
+usage: 
+
+python ecc_finder.py map-sr <reference.fa> <query.fq1> <query.fq2> -r reference.fa (option)
 
 or to speed up:
 
-python ecc_finder.py map-sr <reference.sr.idx> <query.fq1> <query.fq2> -r reference.fa --aligner minimap2
+python ecc_finder.py map-sr <reference.sr.idx> <query.fq1> <query.fq2> -r reference.fa --aligner minimap2 (option)
 
 ```
 
