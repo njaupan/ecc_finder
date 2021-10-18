@@ -123,11 +123,16 @@ Algorithm and usage in details, please see the [Short-read-mapping](https://gith
 
 Run Example2: watch the video [Short-read-mapping_Video_example](https://www.youtube.com/watch?v=XnIvlHGYQvw) using the Arabidopsis eccDNA sequencing subsample in the folder test_samples.
 
+Note that because the output from bwa index, it will create 5 files with appendix: reference.fa.bwt, reference.fa.amb, reference.fa.ann, reference.fa.pac and reference.fa.sa
+
+So the <reference.fa> here represents the whole index output for bwa aligner, and "-r reference.fna" represents the reference fasta file
 
 ```
-usage: python ecc_finder.py map-sr <reference.idx> <query.fq1> <query.fq2> -r reference.fasta (option)
+usage: python ecc_finder.py map-sr <reference.fa> <query.fq1> <query.fq2> -r reference.fasta (option)
 
 ```
+
+
 ## <a name="Long-read-assembly"></a>Long-read-assembly
 
 Algorithm and usage in details, please see the [Long-read-assembly](https://github.com/njaupan/ecc_finder/wiki/Long-read-assembly)
