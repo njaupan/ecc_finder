@@ -193,8 +193,7 @@ All output is in `eccFinder_output` for mapping,  `eccFinder_asm_output` for ass
 |3  |int   |Reference end on original strand          |
 |4  |int   |Circular read number at the locus         |
 |5  |int   |Repeat units of all circular reads        |
-|6  |int   |Read coverage at the locus                |
-|7  |int   |EccDNA sequence length                    |
+|6  |int   |EccDNA sequence length                    |
 
 
 **ecc.{ont,sr}.distribution.png**
