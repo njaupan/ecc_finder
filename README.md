@@ -209,4 +209,4 @@ https://www.ebi.ac.uk/ena/browser/view/PRJEB46420?show=reads
 - Triticum aestivum 
 
 ## Citation
-Panpan Z, Haoran P, Christel L, Etienne B, Marie M. Ecc_finder: a robust and accurate tool for detecting extrachromosomal circular DNA (eccDNA) from sequencing data 
+Panpan Z, Haoran P, Christel L, Etienne B, Marie M. Ecc_finder: a robust and accurate tool for detecting extrachromosomal circular DNA (eccDNA) from sequencing data (https://www.frontiersin.org/articles/10.3389/fpls.2021.743742/abstract)
