@@ -77,7 +77,7 @@ def run_CDHit(file_prefix,output_path, num_threads, identity,memory_limit,seq_le
         else:
             log("INFO", "Overwriting pre-existing file: " + output_path +file_prefix+".fasta")
             CDHit_params = "  -c  "+ str(identity) + " -M " +str(memory_limit)+"  -l " +str(seq_length)
-            CDHit_params += " -n 10 -d 0 -T " + str(num_threads) 
+            CDHit_params += " -d 0 -T " + str(num_threads) 
             CDHit_cmd = "cd-hit-est -i "+ output_path +file_prefix+".cons.fa"+ " -o "+ output_path +file_prefix+".cluster" +CDHit_params
             subprocess.call(CDHit_cmd, shell=True) 
 
@@ -94,7 +94,7 @@ def run_CDHit(file_prefix,output_path, num_threads, identity,memory_limit,seq_le
 
     else:
         CDHit_params = "  -c  "+ str(identity) + " -M " +str(memory_limit)+"  -l " +str(seq_length)
-        CDHit_params += " -n 10 -d 0 -T " + str(num_threads) 
+        CDHit_params += " -d 0 -T " + str(num_threads) 
         CDHit_cmd = "cd-hit-est -i "+ output_path +file_prefix+".cons.fa"+ " -o "+ output_path +file_prefix+".cluster" +CDHit_params
         subprocess.call(CDHit_cmd, shell=True) 
 
@@ -125,7 +125,7 @@ def main():
     val_options.add_argument("-e", metavar="FLT", type=float, default=0.25, help="maximum allowed divergence rate between two consecutive repeats [0.25]")
     val_options.add_argument("-s", metavar="INT", type=int, default=30, help="minimum period size of tandem repeat (>=2) [30]")
     
-    val_options.add_argument("-c", metavar="INT", type=int, default=0.8, help="minimum sequence identity for clustering [0.8]")
+    val_options.add_argument("-c", metavar="FLT", type=float, default=0.8, help="minimum sequence identity for clustering [0.8]")
     val_options.add_argument("-l", metavar="INT", type=int, default=200, help="minimum length of throw_away_sequences [200]")
     val_options.add_argument("-m", metavar="INT", type=int, default=800, help="memory limit (in MB) for CD-hit clustering program [800]")
 
